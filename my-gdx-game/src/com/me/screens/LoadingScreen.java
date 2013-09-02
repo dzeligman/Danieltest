@@ -1,6 +1,5 @@
 package com.me.screens;
 
-
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.delay;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.fadeIn;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.fadeOut;
@@ -21,7 +20,7 @@ import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
+import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction; 
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.me.mygdxgame.LoadingBar;
 import com.me.mygdxgame.MyGdxGame;
@@ -59,7 +58,7 @@ public class LoadingScreen extends AbstractScreen {
         game.manager.finishLoading();
 
         // Initialize the stage where we will place everything
-        stage = new Stage();
+        stage = new Stage(480,320,true);
 
         // Get our textureatlas from the manager
         TextureAtlas atlas = game.manager.get("data/loading.pack", TextureAtlas.class);

@@ -16,17 +16,20 @@ public class LoadingBar extends Actor {
 
     public LoadingBar(Animation animation) {
         this.animation = animation;
-        reg = animation.getKeyFrame(0);
+        boolean looping = false;
+		reg = animation.getKeyFrame(0, looping );
     }
 
     @Override
     public void act(float delta) {
         stateTime += delta;
-        reg = animation.getKeyFrame(stateTime);
+        boolean looping = false;
+        reg = animation.getKeyFrame(stateTime, looping);
     }
 
     @Override
     public void draw(SpriteBatch batch, float parentAlpha) {
+    	
         batch.draw(reg, getX(), getY());
     }
 }
